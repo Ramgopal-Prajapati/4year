@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete B.Tech Career Roadmap | Ram Sir</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #6c63ff;
+            --secondary: #ff6584;
+            --accent: #36d1dc;
+            --dark: #121212;
+            --dark-secondary: #1e1e1e;
+            --light: #f5f5f5;
+            --text: #e0e0e0;
+            --success: #4CAF50;
+            --warning: #FF9800;
+            --info: #2196F3;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--dark), var(--dark-secondary));
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            transition: width 0.3s ease;
+        }
+
+        .logo:hover::after {
+            width: 100%;
+        }
+
+        .welcome-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-text::before {
+            content: 'Welcome Students';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            opacity: 0;
+            animation: textAnimation 3s infinite;
+        }
+
+        @keyframes textAnimation {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(108, 99, 255, 0.1) 0%, transparent 70%);
+            transform: rotate(30deg);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(54, 209, 220, 0.1) 0%, transparent 70%);
+            transform: rotate(-30deg);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--text);
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Roadmap Section */
+        .roadmap {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        .year-container {
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .year-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(54, 209, 220, 0.1));
+            border-radius: 15px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .year-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            margin-right: 20px;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .year-title {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .year-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .semester-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .semester-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .semester-card {
+            background: linear-gradient(135deg, rgba(30, 30, 30, 0.8), rgba(40, 40, 40, 0.8));
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .semester-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .semester-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .semester-header {
+            padding: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .semester-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .semester-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .semester-content {
+            padding: 25px;
+        }
+
+        .topic-list {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        .topic-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .topic-list li:hover {
+            transform: translateX(5px);
+            color: var(--accent);
+        }
+
+        .topic-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech-tag {
+            padding: 5px 12px;
+            background: rgba(108, 99, 255, 0.2);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.2s ease;
+        }
+
+        .tech-tag:hover {
+            background: rgba(108, 99, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .tech-tag i {
+            font-size: 1rem;
+        }
+
+        /* Job Preparation Section */
+        .job-prep {
+            padding: 80px 0;
+            background: rgba(30, 30, 30, 0.5);
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+
+        .job-prep-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .job-card {
+            background: linear-gradient(135deg, rgba(40, 40, 40, 0.8), rgba(50, 50, 50, 0.8));
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .job-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .job-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            border-radius: 15px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-secondary);
+            padding: 60px 0 30px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .made-with {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            color: white;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .social-icon:hover::before {
+            left: 100%;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 20px;
+        }
+
+        /* Scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Progress bar */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            z-index: 1001;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .year-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .year-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .year-title {
+                font-size: 1.5rem;
+            }
+
+            .semester-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Ram Sir</div>
+                <div class="welcome-text">Welcome Students</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Start Your Technical Journey with Ram Sir</h1>
+                <p>A complete 4-year roadmap to make every B.Tech student job ready — from coding fundamentals to interview preparation.</p>
+                <a href="#roadmap" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <h2 class="section-title">4-Year Detailed Career Roadmap</h2>
+            
+            <!-- Year 1 -->
+            <div class="year-container">
+                <div class="year-header">
+                    <div class="year-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <div>
+                        <h2 class="year-title">Year 1: Foundation Building</h2>
+                        <p class="year-subtitle">Establish strong fundamentals in computer science and programming</p>
+                    </div>
+                </div>
+                
+                <div class="semester-cards">
+                    <!-- Semester 1 -->
+                    <div class="semester-card">
+                        <div class="semester-header">
+                            <div class="semester-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3 class="semester-title">Semester 1</h3>
+                        </div>
+                        <div class="semester-content">
+                            <ul class="topic-list">
+                                <li>Computer Fundamentals & Hardware Basics</li>
+                                <li>Operating System Concepts (Windows, Linux)</li>
+                                <li>Introduction to Programming with C</li>
+                                <li>Basic Mathematics for CS</li>
+                                <li>Communication Skills - I</li>
+                                <li>Using PC/Laptop efficiently</li>
+                                <li>Remote Desktop & Basic Networking</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fas fa-desktop"></i> Hardware</span>
+                                <span class="tech-tag"><i class="fab fa-windows"></i> Windows</span>
+                                <span class="tech-tag"><i class="fab fa-linux"></i> Linux</span>
+                                <span class="tech-tag"><i class="fas fa-code"></i> C Language</span>
+                                <span class="tech-tag"><i class="fas fa-network-wired"></i> Networking</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Semester 2 -->
+                    <div class="semester-card">
+                        <div class="semester-header">
+                            <div class="semester-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h3 class="semester-title">Semester 2</h3>
+                        </div>
+                        <div class="semester-content">
+                            <ul class="topic-list">
+                                <li>Advanced C Programming</li>
+                                <li>Data Structures using C</li>
+                                <li>Object-Oriented Programming with C++</li>
+                                <li>Database Management Systems (SQL)</li>
+                                <li>Communication Skills - II</li>
+                                <li>Problem Solving Techniques</li>
+                                <li>Building Small Console Projects</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fas fa-code"></i> Advanced C</span>
+                                <span class="tech-tag"><i class="fas fa-sitemap"></i> Data Structures</span>
+                                <span class="tech-tag"><i class="fab fa-cuttlefish"></i> C++</span>
+                                <span class="tech-tag"><i class="fas fa-database"></i> SQL</span>
+                                <span class="tech-tag"><i class="fas fa-project-diagram"></i> OOP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Year 2 -->
+            <div class="year-container">
+                <div class="year-header">
+                    <div class="year-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h2 class="year-title">Year 2: Core Development</h2>
+                        <p class="year-subtitle">Build strong programming foundations and learn core CS concepts</p>
+                    </div>
+                </div>
+                
+                <div class="semester-cards">
+                    <!-- Semester 3 -->
+                    <div class="semester-card">
+                        <div class="semester-header">
+                            <div class="semester-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="semester-title">Semester 3</h3>
+                        </div>
+                        <div class="semester-content">
+                            <ul class="topic-list">
+                                <li>Advanced Data Structures & Algorithms</li>
+                                <li>Java Programming Fundamentals</li>
+                                <li>Computer Networks</li>
+                                <li>Software Engineering Principles</li>
+                                <li>Web Development Basics (HTML, CSS)</li>
+                                <li>Version Control with Git</li>
+                                <li>Build 2-3 Small Projects</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fas fa-sitemap"></i> DSA</span>
+                                <span class="tech-tag"><i class="fab fa-java"></i> Java</span>
+                                <span class="tech-tag"><i class="fas fa-network-wired"></i> Networks</span>
+                                <span class="tech-tag"><i class="fab fa-html5"></i> HTML/CSS</span>
+                                <span class="tech-tag"><i class="fab fa-git-alt"></i> Git</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Semester 4 -->
+                    <div class="semester-card">
+                        <div class="semester-header">
+                            <div class="semester-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="semester-title">Semester 4</h3>
+                        </div>
+                        <div class="semester-content">
+                            <ul class="topic-list">
+                                <li>Advanced Java & Spring Framework</li>
+                                <li>Python Programming</li>
+                                <li>Database Design & Optimization</li>
+                                <li>Operating Systems Concepts</li>
+                                <li>JavaScript Fundamentals</li>
+                                <li>REST API Concepts</li>
+                                <li>Build 1-2 Medium Complexity Projects</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fab fa-java"></i> Advanced Java</span>
+                                <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                                <span class="tech-tag"><i class="fas fa-database"></i> DB Design</span>
+                                <span class="tech-tag"><i class="fas fa-cogs"></i> OS</span>
+                                <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Year 3 -->
+            <div class="year-container">
+                <div class="year-header">
+                    <div class="year-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div>
+                        <h2 class="year-title">Year 3: Specialization & Projects</h2>
+                        <p class="year-subtitle">Choose your specialization and build real-world projects</p>
+                    </div>
+                </div>
+                
+                <div class="semester-cards">
+                    <!-- Semester 5 -->
+                    <div class="semester-card">
+                        <div class="semester-header">
+                            <div class="semester-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3 class="semester-title">Semester 5</h3>
+                        </div>
+                        <div class="semester-content">
+                            <ul class="topic-list">
+                                <li>Full Stack Web Development</li>
+                                <li>React.js Frontend Framework</li>
+                                <li>Node.js Backend Development</li>
+                                <li>MongoDB & NoSQL Databases</li>
+                                <li>Cloud Computing Basics (AWS/Azure)</li>
+                                <li>DevOps Fundamentals</li>
+                                <li>Build 2 Major Full Stack Projects</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                                <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                                <span class="tech-tag"><i class="fas fa-database"></i> MongoDB</span>
+                                <span class="tech-tag"><i class="fab fa-aws"></i> AWS</span>
+                                <span class="tech-tag"><i classfas fa-code-branch"></i> DevOps</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Semester 6 -->
+                    <div class="semester-card">
+                        <div class="semester-header">
+                            <div class="semester-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3 class="semester-title">Semester 6</h3>
+                        </div>
+                        <div class="semester-content">
+                            <ul class="topic-list">
+                                <li>Mobile App Development (React Native/Flutter)</li>
+                                <li>Advanced System Design</li>
+                                <li>Machine Learning Fundamentals</li>
+                                <li>Cybersecurity Basics</li>
+                                <li>Software Testing & QA</li>
+                                <li>Participate in Hackathons</li>
+                                <li>Build a Complex Capstone Project</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fab fa-react"></i> React Native</span>
+                                <span class="tech-tag"><i class="fab fa-google"></i> Flutter</span>
+                                <span class="tech-tag"><i class="fas fa-robot"></i> ML Basics</span>
+                                <span class="tech-tag"><i class="fas fa-shield-alt"></i> Cybersecurity</span>
+                                <span class="tech-tag"><i class="fas fa-bug"></i> Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Year 4 -->
+            <div class="year-container">
+                <div class="year-header">
+                    <div class="year-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div>
+                        <h2 class="year-title">Year 4: Placement Preparation</h2>
+                        <p class="year-subtitle">Focus on interview preparation and securing your dream job</p>
+                    </div>
+                </div>
+                
+                <div class="semester-cards">
+                    <!-- Semester 7 -->
+                    <div class="semester-card">
+                        <div class="semester-header">
+                            <div class="semester-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h3 class="semester-title">Semester 7</h3>
+                        </div>
+                        <div class="semester-content">
+                            <ul class="topic-list">
+                                <li>Resume Building & LinkedIn Optimization</li>
+                                <li>Advanced DSA & Problem Solving</li>
+                                <li>Technical Interview Preparation</li>
+                                <li>System Design for Interviews</li>
+                                <li>Behavioral Interview Preparation</li>
+                                <li>Mock Interviews & Coding Tests</li>
+                                <li>Open Source Contribution</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fas fa-file-alt"></i> Resume</span>
+                                <span class="tech-tag"><i class="fab fa-linkedin"></i> LinkedIn</span>
+                                <span class="tech-tag"><i class="fas fa-sitemap"></i> System Design</span>
+                                <span class="tech-tag"><i class="fas fa-code"></i> Coding Tests</span>
+                                <span class="tech-tag"><i class="fas fa-comments"></i> Mock Interviews</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Semester 8 -->
+                    <div class="semester-card">
+                        <div class="semester-header">
+                            <div class="semester-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3 class="semester-title">Semester 8</h3>
+                        </div>
+                        <div class="semester-content">
+                            <ul class="topic-list">
+                                <li>Internship / Final Year Project</li>
+                                <li>Job Application Strategy</li>
+                                <li>Company-specific Preparation</li>
+                                <li>HR Interview Practice</li>
+                                <li>Salary Negotiation Skills</li>
+                                <li>Networking & Referrals</li>
+                                <li>Offer Evaluation & Acceptance</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fas fa-user-graduate"></i> Internship</span>
+                                <span class="tech-tag"><i class="fas fa-tasks"></i> Job Applications</span>
+                                <span class="tech-tag"><i class="fas fa-handshake"></i> HR Interviews</span>
+                                <span class="tech-tag"><i class="fas fa-money-bill-wave"></i> Negotiation</span>
+                                <span class="tech-tag"><i class="fas fa-network-wired"></i> Networking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Job Preparation Section -->
+            <div class="job-prep">
+                <h2 class="section-title">Job Preparation Strategy</h2>
+                <div class="job-prep-grid">
+                    <div class="job-card">
+                        <div class="job-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="job-title">Resume Building</h3>
+                        <p>Create an ATS-friendly resume highlighting projects, skills, and achievements. Tailor it for each job application.</p>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="job-title">Technical Preparation</h3>
+                        <p>Master DSA, system design, and technology stacks. Practice on platforms like LeetCode, HackerRank.</p>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="job-title">Project Portfolio</h3>
+                        <p>Build 3-5 substantial projects demonstrating full-stack capabilities and problem-solving skills.</p>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="job-title">Networking</h3>
+                        <p>Leverage LinkedIn, alumni networks, and tech communities for referrals and opportunities.</p>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="job-title">Mock Interviews</h3>
+                        <p>Practice with peers, mentors, and through platforms like Pramp to build confidence.</p>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="job-title">Continuous Learning</h3>
+                        <p>Stay updated with industry trends, new technologies, and keep improving your skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="made-with">
+                    <span>Made with ❤️ by Ram Sir</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="copyright">© 2023 Ram Sir. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const winHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.pageYOffset;
+            const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+            document.getElementById('progressBar').style.width = scrollPercent + '%';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll to top button functionality
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Scroll animation for roadmap cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.semester-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Add hover effect to year headers
+        document.querySelectorAll('.year-header').forEach(header => {
+            header.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(10px)';
+            });
+            
+            header.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+</body>
+</html>
